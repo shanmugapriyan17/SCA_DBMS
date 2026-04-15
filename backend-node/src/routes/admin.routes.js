@@ -5,6 +5,7 @@
 const express = require('express');
 const router = express.Router();
 const { Skill, Question, Assessment, Career, User } = require('../models');
+const { runQuery } = require('../config/neo4j');
 
 // ─── Career → Skills mapping ────────────────────────────────────────────────
 const CAREER_SKILL_MAP = {
@@ -327,6 +328,67 @@ router.post('/seed', async (req, res) => {
         results.counts.questions = totalQuestions;
         results.steps.push(`📝 ${totalAssessments} assessments seeded (8 careers × 3 levels)`);
         results.steps.push(`❓ ${totalQuestions} questions seeded`);
+
+        // ── 6. Neo4j Graph — Skill nodes, Career nodes, relationships ────────
+        try {
+            // Clear existing Neo4j graph
+            await runQuery('MATCH (n) DETACH DELETE n');
+
+            // Create Skill nodes
+            for (const skill of skills) {
+                await runQuery(
+                    'CREATE (s:Skill {id: $id, name: $name, category: $category})',
+                    { id: skill._id.toString(), name: skill.skill_name, category: skill.category }
+                );
+            }
+
+            // Create Career nodes
+            for (const career of careers) {
+                await runQuery(
+                    'CREATE (c:Career {id: $id, title: $title, industry: $industry})',
+                    { id: career._id.toString(), title: career.title, industry: career.industry }
+                );
+            }
+
+            // Create REQUIRED_FOR relationships (Skill → Career)
+            for (const rawCareer of CAREERS_DATA) {
+                const savedCareer = careers.find(c => c.title === rawCareer.title);
+                if (!savedCareer) continue;
+                for (const rs of rawCareer.required_skills) {
+                    const savedSkill = skillMap[rs.skill_name];
+                    if (!savedSkill) continue;
+                    await runQuery(
+                        `MATCH (s:Skill {id: $sid}), (c:Career {id: $cid})
+                         CREATE (s)-[:REQUIRED_FOR {level: $level, importance: $importance}]->(c)`,
+                        { sid: savedSkill._id.toString(), cid: savedCareer._id.toString(),
+                          level: rs.required_level, importance: rs.importance }
+                    );
+                }
+            }
+
+            // Career progression paths — LEADS_TO relationships
+            const progressions = [
+                { from:'Data Analyst',       to:'Data Scientist',       years:2 },
+                { from:'Data Scientist',     to:'ML Engineer',           years:2 },
+                { from:'Frontend Developer', to:'Full Stack Developer',  years:2 },
+                { from:'Backend Developer',  to:'Full Stack Developer',  years:2 },
+                { from:'Full Stack Developer', to:'DevOps Engineer',     years:3 },
+                { from:'Database Administrator', to:'Data Analyst',      years:2 },
+                { from:'Database Administrator', to:'Full Stack Developer', years:3 },
+            ];
+            for (const p of progressions) {
+                await runQuery(
+                    `MATCH (c1:Career {title: $from}), (c2:Career {title: $to})
+                     CREATE (c1)-[:LEADS_TO {years_experience: $years}]->(c2)`,
+                    p
+                );
+            }
+
+            results.steps.push(`🕸️  Neo4j: ${skills.length} skill nodes + ${careers.length} career nodes + ${progressions.length} progression paths`);
+            results.counts.neo4j_nodes = skills.length + careers.length;
+        } catch (neo4jErr) {
+            results.errors.push(`⚠️  Neo4j seeding failed: ${neo4jErr.message}`);
+        }
 
         return res.json({ success:true, message:'🎉 Database seeded successfully!', results });
 
