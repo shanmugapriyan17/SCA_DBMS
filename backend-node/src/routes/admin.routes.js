@@ -225,22 +225,22 @@ const SKILLS_DATA = [
 
 // ─── Careers data ───────────────────────────────────────────────────────────
 const CAREERS_DATA = [
-  { title:'Data Scientist',         industry:'Technology',    avg_salary:120000, growth_outlook:'High',   description:'Analyze complex data to extract insights and build predictive models.',
-    required_skills:[{skill_name:'Python',importance:'critical'},{skill_name:'Machine Learning',importance:'critical'},{skill_name:'SQL',importance:'important'},{skill_name:'Statistics',importance:'critical'},{skill_name:'Data Analysis',importance:'important'}]},
-  { title:'Full Stack Developer',   industry:'Technology',    avg_salary:110000, growth_outlook:'High',   description:'Build both frontend and backend components of web applications.',
-    required_skills:[{skill_name:'JavaScript',importance:'critical'},{skill_name:'React',importance:'important'},{skill_name:'Node.js',importance:'important'},{skill_name:'MongoDB',importance:'helpful'},{skill_name:'SQL',importance:'helpful'}]},
-  { title:'Frontend Developer',     industry:'Technology',    avg_salary:95000,  growth_outlook:'Medium', description:'Create user interfaces and experiences for web applications.',
-    required_skills:[{skill_name:'JavaScript',importance:'critical'},{skill_name:'React',importance:'critical'},{skill_name:'Git',importance:'important'}]},
-  { title:'Backend Developer',      industry:'Technology',    avg_salary:100000, growth_outlook:'High',   description:'Design and implement server-side logic, databases, and APIs.',
-    required_skills:[{skill_name:'Python',importance:'critical'},{skill_name:'SQL',importance:'critical'},{skill_name:'API Development',importance:'important'},{skill_name:'Git',importance:'important'}]},
-  { title:'Data Analyst',           industry:'Business',      avg_salary:80000,  growth_outlook:'High',   description:'Interpret data and turn it into actionable business insights.',
-    required_skills:[{skill_name:'SQL',importance:'critical'},{skill_name:'Data Analysis',importance:'critical'},{skill_name:'Statistics',importance:'important'},{skill_name:'Python',importance:'helpful'}]},
-  { title:'ML Engineer',            industry:'Technology',    avg_salary:130000, growth_outlook:'High',   description:'Build and deploy machine learning models and pipelines at scale.',
-    required_skills:[{skill_name:'Python',importance:'critical'},{skill_name:'Machine Learning',importance:'critical'},{skill_name:'Docker',importance:'important'}]},
-  { title:'DevOps Engineer',        industry:'Technology',    avg_salary:115000, growth_outlook:'High',   description:'Bridge development and operations with automation, CI/CD, and cloud infrastructure.',
-    required_skills:[{skill_name:'Docker',importance:'critical'},{skill_name:'AWS',importance:'critical'},{skill_name:'Git',importance:'important'}]},
-  { title:'Database Administrator', industry:'Enterprise',    avg_salary:90000,  growth_outlook:'Medium', description:'Manage database systems, optimize performance, and ensure data security.',
-    required_skills:[{skill_name:'SQL',importance:'critical'},{skill_name:'MongoDB',importance:'important'}]},
+  { title:'Data Scientist',         industry:'Technology',  avg_salary:'$100,000-$140,000', growth_outlook:'High demand', description:'Analyze complex data to extract insights and build predictive models.',
+    required_skills:[{skill_name:'Python',importance:'must_have',required_level:80},{skill_name:'Machine Learning',importance:'must_have',required_level:80},{skill_name:'SQL',importance:'must_have',required_level:70},{skill_name:'Statistics',importance:'must_have',required_level:75},{skill_name:'Data Analysis',importance:'must_have',required_level:75}]},
+  { title:'Full Stack Developer',   industry:'Technology',  avg_salary:'$90,000-$130,000',  growth_outlook:'High demand', description:'Build both frontend and backend components of web applications.',
+    required_skills:[{skill_name:'JavaScript',importance:'must_have',required_level:80},{skill_name:'React',importance:'must_have',required_level:75},{skill_name:'Node.js',importance:'must_have',required_level:75},{skill_name:'MongoDB',importance:'nice_to_have',required_level:60},{skill_name:'SQL',importance:'nice_to_have',required_level:60}]},
+  { title:'Frontend Developer',     industry:'Technology',  avg_salary:'$75,000-$110,000',  growth_outlook:'Growing',     description:'Create user interfaces and experiences for web applications.',
+    required_skills:[{skill_name:'JavaScript',importance:'must_have',required_level:80},{skill_name:'React',importance:'must_have',required_level:80},{skill_name:'Git',importance:'must_have',required_level:60}]},
+  { title:'Backend Developer',      industry:'Technology',  avg_salary:'$80,000-$120,000',  growth_outlook:'High demand', description:'Design and implement server-side logic, databases, and APIs.',
+    required_skills:[{skill_name:'Python',importance:'must_have',required_level:75},{skill_name:'SQL',importance:'must_have',required_level:75},{skill_name:'API Development',importance:'must_have',required_level:70},{skill_name:'Git',importance:'must_have',required_level:60}]},
+  { title:'Data Analyst',           industry:'Business',    avg_salary:'$60,000-$95,000',   growth_outlook:'High demand', description:'Interpret data and turn it into actionable business insights.',
+    required_skills:[{skill_name:'SQL',importance:'must_have',required_level:80},{skill_name:'Data Analysis',importance:'must_have',required_level:80},{skill_name:'Statistics',importance:'must_have',required_level:70},{skill_name:'Python',importance:'nice_to_have',required_level:50}]},
+  { title:'ML Engineer',            industry:'Technology',  avg_salary:'$110,000-$150,000', growth_outlook:'High demand', description:'Build and deploy machine learning models and pipelines at scale.',
+    required_skills:[{skill_name:'Python',importance:'must_have',required_level:85},{skill_name:'Machine Learning',importance:'must_have',required_level:85},{skill_name:'Docker',importance:'must_have',required_level:65}]},
+  { title:'DevOps Engineer',        industry:'Technology',  avg_salary:'$90,000-$130,000',  growth_outlook:'High demand', description:'Bridge development and operations with automation, CI/CD, and cloud infrastructure.',
+    required_skills:[{skill_name:'Docker',importance:'must_have',required_level:80},{skill_name:'AWS',importance:'must_have',required_level:75},{skill_name:'Git',importance:'must_have',required_level:70}]},
+  { title:'Database Administrator', industry:'Enterprise',  avg_salary:'$70,000-$105,000',  growth_outlook:'Stable',      description:'Manage database systems, optimize performance, and ensure data security.',
+    required_skills:[{skill_name:'SQL',importance:'must_have',required_level:90},{skill_name:'MongoDB',importance:'must_have',required_level:70}]},
 ];
 
 // ─── POST /api/admin/seed?key=<SEED_SECRET> ─────────────────────────────────
