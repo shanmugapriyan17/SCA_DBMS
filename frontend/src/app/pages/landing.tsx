@@ -52,51 +52,41 @@ export function LandingPage() {
               </div>
             </div>
 
-            {/* Visual Content */}
+            {/* Visual Content — Hero Image */}
             <div className="hidden lg:block lg:col-span-6 relative mt-12 lg:mt-0">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 dark:border-slate-700/50 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm">
-                <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-800 dark:to-slate-900 relative p-8 flex items-center justify-center">
-                  {/* Simulated Dashboard */}
-                  <div className="w-full max-w-sm bg-white dark:bg-surface-dark rounded-xl p-6 shadow-lg border border-slate-100 dark:border-slate-700">
-                    <div className="space-y-3">
-                      {[85, 72, 91, 65, 78].map((w, i) => (
-                        <div key={i} className="flex items-center gap-3">
-                          <div className="h-2 w-16 bg-slate-100 dark:bg-slate-800 rounded"></div>
-                          <div className="flex-1 bg-slate-100 dark:bg-slate-800 rounded-full h-2.5">
-                            <div className="bg-primary h-2.5 rounded-full" style={{ width: `${w}%` }}></div>
-                          </div>
-                          <span className="text-xs font-mono text-primary font-medium w-8">{w}%</span>
-                        </div>
-                      ))}
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20 dark:border-slate-700/50">
+                {/* Glow effect behind image */}
+                <div className="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl opacity-60 pointer-events-none"></div>
+                <img
+                  src="/quizzes.png"
+                  alt="Smart Career Advisor — Skill Assessment Dashboard"
+                  className="relative w-full h-auto rounded-2xl object-cover"
+                  loading="eager"
+                />
+                {/* Floating Skill Match Card */}
+                <div className="absolute top-6 right-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700 animate-[bounce_3s_infinite]">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
+                      <span className="material-icons text-sm">trending_up</span>
+                    </div>
+                    <div>
+                      <p className="text-xs text-slate-500 uppercase font-bold">Skill Match</p>
+                      <p className="font-bold text-slate-800 dark:text-white">98% Match</p>
                     </div>
                   </div>
-
-                  {/* Floating Skill Match Card */}
-                  <div className="absolute top-10 right-10 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700 animate-[bounce_3s_infinite]">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-8 h-8 rounded-full bg-green-100 text-green-600 flex items-center justify-center">
-                        <span className="material-icons text-sm">trending_up</span>
-                      </div>
-                      <div>
-                        <p className="text-xs text-slate-500 uppercase font-bold">Skill Match</p>
-                        <p className="font-bold text-slate-800 dark:text-white">98% Match</p>
-                      </div>
-                    </div>
-                    <div className="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
-                      <div className="h-full bg-green-500 w-[98%]"></div>
-                    </div>
+                  <div className="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <div className="h-full bg-green-500 w-[98%]"></div>
                   </div>
-
-                  {/* Floating Analysis Card */}
-                  <div className="absolute bottom-12 left-12 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-lg border border-slate-100 dark:border-slate-700">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
-                        <span className="material-icons">psychology</span>
-                      </div>
-                      <div>
-                        <p className="text-sm font-bold text-slate-800 dark:text-white">Analysis Complete</p>
-                        <p className="text-xs text-slate-500">Ready for review</p>
-                      </div>
+                </div>
+                {/* Floating Analysis Card */}
+                <div className="absolute bottom-6 left-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl border border-slate-100 dark:border-slate-700">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                      <span className="material-icons">psychology</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-bold text-slate-800 dark:text-white">Analysis Complete</p>
+                      <p className="text-xs text-slate-500">Ready for review</p>
                     </div>
                   </div>
                 </div>
