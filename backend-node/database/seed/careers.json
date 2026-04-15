@@ -1,0 +1,229 @@
+[
+    {
+        "title": "Data Scientist",
+        "description": "Analyze complex data to help organizations make better decisions. Use statistics, machine learning, and programming to extract insights.",
+        "industry": "Technology",
+        "required_skills": [
+            {
+                "skill_name": "Python",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "SQL",
+                "required_level": 60,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Machine Learning",
+                "required_level": 75,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Statistics",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Data Analysis",
+                "required_level": 65,
+                "importance": "must_have"
+            }
+        ],
+        "avg_salary": "₹8-20 LPA",
+        "growth_outlook": "High demand"
+    },
+    {
+        "title": "Full Stack Developer",
+        "description": "Build complete web applications from frontend UI to backend servers and databases.",
+        "industry": "Technology",
+        "required_skills": [
+            {
+                "skill_name": "JavaScript",
+                "required_level": 75,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "React",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Node.js",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "MongoDB",
+                "required_level": 60,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Git",
+                "required_level": 55,
+                "importance": "must_have"
+            }
+        ],
+        "avg_salary": "₹6-18 LPA",
+        "growth_outlook": "High demand"
+    },
+    {
+        "title": "Backend Developer",
+        "description": "Design and build server-side logic, APIs, and database systems that power applications.",
+        "industry": "Technology",
+        "required_skills": [
+            {
+                "skill_name": "Python",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "SQL",
+                "required_level": 65,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "API Development",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Git",
+                "required_level": 55,
+                "importance": "must_have"
+            }
+        ],
+        "avg_salary": "₹5-15 LPA",
+        "growth_outlook": "Growing"
+    },
+    {
+        "title": "Frontend Developer",
+        "description": "Create responsive and interactive user interfaces for web applications.",
+        "industry": "Technology",
+        "required_skills": [
+            {
+                "skill_name": "JavaScript",
+                "required_level": 75,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "React",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Git",
+                "required_level": 50,
+                "importance": "must_have"
+            }
+        ],
+        "avg_salary": "₹4-12 LPA",
+        "growth_outlook": "Growing"
+    },
+    {
+        "title": "Data Analyst",
+        "description": "Transform data into insights to support business decisions. Create reports and visualizations.",
+        "industry": "Technology",
+        "required_skills": [
+            {
+                "skill_name": "SQL",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Data Analysis",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Statistics",
+                "required_level": 55,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Python",
+                "required_level": 50,
+                "importance": "nice_to_have"
+            }
+        ],
+        "avg_salary": "₹4-10 LPA",
+        "growth_outlook": "Growing"
+    },
+    {
+        "title": "DevOps Engineer",
+        "description": "Bridge development and operations. Automate deployment pipelines and manage infrastructure.",
+        "industry": "Technology",
+        "required_skills": [
+            {
+                "skill_name": "Docker",
+                "required_level": 70,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "AWS",
+                "required_level": 65,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Git",
+                "required_level": 60,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Python",
+                "required_level": 50,
+                "importance": "nice_to_have"
+            }
+        ],
+        "avg_salary": "₹8-20 LPA",
+        "growth_outlook": "High demand"
+    },
+    {
+        "title": "ML Engineer",
+        "description": "Deploy and scale machine learning models in production systems.",
+        "industry": "Technology",
+        "required_skills": [
+            {
+                "skill_name": "Python",
+                "required_level": 80,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Machine Learning",
+                "required_level": 80,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "Docker",
+                "required_level": 60,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "AWS",
+                "required_level": 55,
+                "importance": "nice_to_have"
+            }
+        ],
+        "avg_salary": "₹12-30 LPA",
+        "growth_outlook": "High demand"
+    },
+    {
+        "title": "Database Administrator",
+        "description": "Manage, maintain, and optimize database systems for performance and reliability.",
+        "industry": "Technology",
+        "required_skills": [
+            {
+                "skill_name": "SQL",
+                "required_level": 85,
+                "importance": "must_have"
+            },
+            {
+                "skill_name": "MongoDB",
+                "required_level": 65,
+                "importance": "nice_to_have"
+            }
+        ],
+        "avg_salary": "₹5-15 LPA",
+        "growth_outlook": "Stable"
+    }
+]

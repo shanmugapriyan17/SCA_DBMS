@@ -1,0 +1,327 @@
+[
+    {
+        "skill_name": "Python",
+        "questions": [
+            {
+                "content": "What is the output of: print(type([]))?",
+                "options": [
+                    "<class 'tuple'>",
+                    "<class 'list'>",
+                    "<class 'dict'>",
+                    "<class 'set'>"
+                ],
+                "correct_answer": "B",
+                "difficulty": 1,
+                "explanation": "Empty square brackets [] create an empty list in Python."
+            },
+            {
+                "content": "Which keyword is used to define a function in Python?",
+                "options": [
+                    "function",
+                    "def",
+                    "func",
+                    "define"
+                ],
+                "correct_answer": "B",
+                "difficulty": 1,
+                "explanation": "The 'def' keyword is used to define functions in Python."
+            },
+            {
+                "content": "What does 'len([1, 2, 3])' return?",
+                "options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ],
+                "correct_answer": "C",
+                "difficulty": 1,
+                "explanation": "len() returns the number of elements in a list."
+            },
+            {
+                "content": "Which of these is a valid variable name in Python?",
+                "options": [
+                    "2variable",
+                    "my-var",
+                    "_myVar",
+                    "my var"
+                ],
+                "correct_answer": "C",
+                "difficulty": 2,
+                "explanation": "Variable names can start with underscore or letter, not number or have spaces/hyphens."
+            },
+            {
+                "content": "What is the purpose of __init__ in a Python class?",
+                "options": [
+                    "Destructor",
+                    "Constructor",
+                    "Iterator",
+                    "Comparator"
+                ],
+                "correct_answer": "B",
+                "difficulty": 3,
+                "explanation": "__init__ is the constructor method called when creating class instances."
+            }
+        ]
+    },
+    {
+        "skill_name": "JavaScript",
+        "questions": [
+            {
+                "content": "Which keyword declares a block-scoped variable?",
+                "options": [
+                    "var",
+                    "let",
+                    "const",
+                    "Both B and C"
+                ],
+                "correct_answer": "D",
+                "difficulty": 1,
+                "explanation": "Both 'let' and 'const' declare block-scoped variables, unlike 'var'."
+            },
+            {
+                "content": "What does '===' operator check in JavaScript?",
+                "options": [
+                    "Value only",
+                    "Type only",
+                    "Value and type",
+                    "Reference"
+                ],
+                "correct_answer": "C",
+                "difficulty": 2,
+                "explanation": "Strict equality (===) checks both value and type without coercion."
+            },
+            {
+                "content": "What is the output of: typeof null?",
+                "options": [
+                    "'null'",
+                    "'undefined'",
+                    "'object'",
+                    "'boolean'"
+                ],
+                "correct_answer": "C",
+                "difficulty": 3,
+                "explanation": "This is a known JavaScript quirk - typeof null returns 'object'."
+            },
+            {
+                "content": "Which method adds an element to the end of an array?",
+                "options": [
+                    "push()",
+                    "pop()",
+                    "shift()",
+                    "unshift()"
+                ],
+                "correct_answer": "A",
+                "difficulty": 1,
+                "explanation": "push() adds elements to the end, pop() removes from end."
+            },
+            {
+                "content": "What is a Promise in JavaScript?",
+                "options": [
+                    "A guarantee of code execution",
+                    "An async operation result placeholder",
+                    "A type of loop",
+                    "A variable declaration"
+                ],
+                "correct_answer": "B",
+                "difficulty": 3,
+                "explanation": "A Promise represents the eventual completion of an async operation."
+            }
+        ]
+    },
+    {
+        "skill_name": "SQL",
+        "questions": [
+            {
+                "content": "Which SQL statement is used to extract data from a database?",
+                "options": [
+                    "GET",
+                    "EXTRACT",
+                    "SELECT",
+                    "PULL"
+                ],
+                "correct_answer": "C",
+                "difficulty": 1,
+                "explanation": "SELECT is the standard SQL command to query data."
+            },
+            {
+                "content": "Which clause is used to filter records?",
+                "options": [
+                    "WHERE",
+                    "FILTER",
+                    "HAVING",
+                    "FIND"
+                ],
+                "correct_answer": "A",
+                "difficulty": 1,
+                "explanation": "WHERE filters rows before grouping, HAVING filters after."
+            },
+            {
+                "content": "What does JOIN do in SQL?",
+                "options": [
+                    "Merges columns",
+                    "Combines rows from tables",
+                    "Creates new table",
+                    "Deletes duplicates"
+                ],
+                "correct_answer": "B",
+                "difficulty": 2,
+                "explanation": "JOIN combines rows from two or more tables based on a related column."
+            },
+            {
+                "content": "Which type of JOIN returns all rows from both tables?",
+                "options": [
+                    "INNER JOIN",
+                    "LEFT JOIN",
+                    "RIGHT JOIN",
+                    "FULL OUTER JOIN"
+                ],
+                "correct_answer": "D",
+                "difficulty": 3,
+                "explanation": "FULL OUTER JOIN returns all rows when there's a match in either table."
+            },
+            {
+                "content": "What is a PRIMARY KEY?",
+                "options": [
+                    "Any column",
+                    "First column",
+                    "Unique identifier for each row",
+                    "Foreign reference"
+                ],
+                "correct_answer": "C",
+                "difficulty": 2,
+                "explanation": "Primary key uniquely identifies each record in a table."
+            }
+        ]
+    },
+    {
+        "skill_name": "React",
+        "questions": [
+            {
+                "content": "What function is used to create a React component with state?",
+                "options": [
+                    "useState()",
+                    "setState()",
+                    "createState()",
+                    "initState()"
+                ],
+                "correct_answer": "A",
+                "difficulty": 1,
+                "explanation": "useState is a React Hook for adding state to functional components."
+            },
+            {
+                "content": "What is JSX?",
+                "options": [
+                    "JavaScript XML",
+                    "Java Syntax Extension",
+                    "JSON XML",
+                    "JavaScript Extension"
+                ],
+                "correct_answer": "A",
+                "difficulty": 1,
+                "explanation": "JSX stands for JavaScript XML and allows writing HTML in React."
+            },
+            {
+                "content": "Which hook is used for side effects in React?",
+                "options": [
+                    "useState",
+                    "useEffect",
+                    "useContext",
+                    "useReducer"
+                ],
+                "correct_answer": "B",
+                "difficulty": 2,
+                "explanation": "useEffect handles side effects like API calls and subscriptions."
+            },
+            {
+                "content": "What is the virtual DOM?",
+                "options": [
+                    "Browser DOM",
+                    "Lightweight copy of DOM",
+                    "Server-side DOM",
+                    "CSS DOM"
+                ],
+                "correct_answer": "B",
+                "difficulty": 2,
+                "explanation": "Virtual DOM is React's lightweight copy for efficient updates."
+            },
+            {
+                "content": "How do you pass data to a child component?",
+                "options": [
+                    "state",
+                    "props",
+                    "context",
+                    "redux"
+                ],
+                "correct_answer": "B",
+                "difficulty": 1,
+                "explanation": "Props (properties) pass data from parent to child components."
+            }
+        ]
+    },
+    {
+        "skill_name": "Machine Learning",
+        "questions": [
+            {
+                "content": "What is supervised learning?",
+                "options": [
+                    "Learning without data",
+                    "Learning with labeled data",
+                    "Learning without labels",
+                    "Reinforcement learning"
+                ],
+                "correct_answer": "B",
+                "difficulty": 1,
+                "explanation": "Supervised learning uses labeled training data to learn patterns."
+            },
+            {
+                "content": "Which algorithm is used for classification?",
+                "options": [
+                    "Linear Regression",
+                    "K-Means",
+                    "Decision Tree",
+                    "PCA"
+                ],
+                "correct_answer": "C",
+                "difficulty": 2,
+                "explanation": "Decision Trees can be used for classification and regression."
+            },
+            {
+                "content": "What is overfitting?",
+                "options": [
+                    "Model too simple",
+                    "Model memorizes training data",
+                    "Model underfits",
+                    "Model fails to train"
+                ],
+                "correct_answer": "B",
+                "difficulty": 2,
+                "explanation": "Overfitting occurs when model learns noise instead of patterns."
+            },
+            {
+                "content": "What does 'training data' refer to?",
+                "options": [
+                    "Test dataset",
+                    "Data used to build model",
+                    "Validation set",
+                    "Production data"
+                ],
+                "correct_answer": "B",
+                "difficulty": 1,
+                "explanation": "Training data is used to teach the model to recognize patterns."
+            },
+            {
+                "content": "What is a neural network?",
+                "options": [
+                    "Database system",
+                    "Brain-inspired computing model",
+                    "Network protocol",
+                    "File system"
+                ],
+                "correct_answer": "B",
+                "difficulty": 2,
+                "explanation": "Neural networks are inspired by biological neural networks in brains."
+            }
+        ]
+    }
+]

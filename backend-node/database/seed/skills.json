@@ -1,0 +1,92 @@
+[
+    {
+        "skill_name": "Python",
+        "category": "Programming",
+        "description": "General-purpose programming language known for simplicity and versatility",
+        "icon": "🐍"
+    },
+    {
+        "skill_name": "JavaScript",
+        "category": "Programming",
+        "description": "Core language for web development, both frontend and backend",
+        "icon": "⚡"
+    },
+    {
+        "skill_name": "SQL",
+        "category": "Database",
+        "description": "Standard language for managing relational databases",
+        "icon": "📊"
+    },
+    {
+        "skill_name": "MongoDB",
+        "category": "Database",
+        "description": "NoSQL document database for modern applications",
+        "icon": "🍃"
+    },
+    {
+        "skill_name": "React",
+        "category": "Web Development",
+        "description": "Popular JavaScript library for building user interfaces",
+        "icon": "⚛️"
+    },
+    {
+        "skill_name": "Node.js",
+        "category": "Web Development",
+        "description": "JavaScript runtime for server-side development",
+        "icon": "💚"
+    },
+    {
+        "skill_name": "Machine Learning",
+        "category": "Data Science",
+        "description": "Building systems that learn from data",
+        "icon": "🤖"
+    },
+    {
+        "skill_name": "Statistics",
+        "category": "Data Science",
+        "description": "Mathematical analysis and interpretation of data",
+        "icon": "📈"
+    },
+    {
+        "skill_name": "Data Analysis",
+        "category": "Data Science",
+        "description": "Extracting insights from structured and unstructured data",
+        "icon": "🔍"
+    },
+    {
+        "skill_name": "AWS",
+        "category": "Cloud",
+        "description": "Amazon Web Services cloud computing platform",
+        "icon": "☁️"
+    },
+    {
+        "skill_name": "Docker",
+        "category": "DevOps",
+        "description": "Container platform for application deployment",
+        "icon": "🐳"
+    },
+    {
+        "skill_name": "Git",
+        "category": "DevOps",
+        "description": "Version control system for code management",
+        "icon": "📝"
+    },
+    {
+        "skill_name": "API Development",
+        "category": "Web Development",
+        "description": "Designing and building REST and GraphQL APIs",
+        "icon": "🔌"
+    },
+    {
+        "skill_name": "Communication",
+        "category": "Soft Skills",
+        "description": "Effective verbal and written communication",
+        "icon": "💬"
+    },
+    {
+        "skill_name": "Problem Solving",
+        "category": "Soft Skills",
+        "description": "Analytical thinking and solution design",
+        "icon": "🧩"
+    }
+]

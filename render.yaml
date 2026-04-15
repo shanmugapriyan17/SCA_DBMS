@@ -1,0 +1,43 @@
+# render.yaml — Render.com deployment config for Smart Career Advisor Backend
+# Docs: https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: smart-career-advisor-api
+    runtime: node
+    rootDir: backend-node
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free                    # free tier — upgrade to starter for always-on
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        sync: false               # fill manually in Render dashboard
+      - key: JWT_EXPIRES_IN
+        value: 7d
+      - key: MONGODB_URI
+        sync: false               # paste MongoDB Atlas SRV string
+      - key: MYSQL_HOST
+        sync: false
+      - key: MYSQL_PORT
+        value: 3306
+      - key: MYSQL_USER
+        sync: false
+      - key: MYSQL_PASSWORD
+        sync: false
+      - key: MYSQL_DATABASE
+        value: skill_career_analytics
+      - key: MYSQL_SSL
+        value: "true"
+      - key: NEO4J_URI
+        sync: false               # paste Neo4j AuraDB URI (neo4j+s://...)
+      - key: NEO4J_USER
+        value: neo4j
+      - key: NEO4J_PASSWORD
+        sync: false
+      - key: FRONTEND_URL
+        sync: false               # paste your Vercel frontend URL
