@@ -4,7 +4,7 @@
  */
 const express = require('express');
 const router = express.Router();
-const { Skill, Question, Assessment, Career, User } = require('../models');
+const { Skill, Question, Assessment, Career, User, UserSkill, Attempt } = require('../models');
 const { runQuery } = require('../config/neo4j');
 
 // ─── Career → Skills mapping ────────────────────────────────────────────────
@@ -253,13 +253,15 @@ router.post('/seed', async (req, res) => {
     const results = { steps:[], errors:[], counts:{} };
 
     try {
-        // ── 1. Clear ────────────────────────────────────────────────────────
+        // ── 1. Clear ALL data (ref + user-specific) ───────────────────────────
         await Skill.deleteMany({});
         await Question.deleteMany({});
         await Assessment.deleteMany({});
         await Career.deleteMany({});
+        await UserSkill.deleteMany({});   // clear orphaned user skill scores
+        await Attempt.deleteMany({});     // clear all attempt history
         await User.deleteMany({ email:'admin@sca.com' });
-        results.steps.push('🗑️  Cleared all seed data');
+        results.steps.push('🗑️  Cleared all seed data (skills, careers, assessments, questions, attempts, user skills)');
 
         // ── 2. Admin user ────────────────────────────────────────────────────
         const adminUser = new User({ username:'admin', email:'admin@sca.com', password_hash:'Admin@1234', profile:{ full_name:'System Admin' } });

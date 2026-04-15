@@ -72,10 +72,13 @@ router.get('/user/me', authMiddleware, async (req, res) => {
             .populate('skill_id', 'skill_name category icon')
             .sort({ score: -1 });
 
+        // Filter out orphaned UserSkill docs where skill was deleted (e.g. after re-seed)
+        const validSkills = userSkills.filter(us => us.skill_id != null);
+
         res.json({
             success: true,
             data: {
-                userSkills: userSkills.map(us => ({
+                userSkills: validSkills.map(us => ({
                     skill_id: us.skill_id._id,
                     skill_name: us.skill_id.skill_name,
                     category: us.skill_id.category,

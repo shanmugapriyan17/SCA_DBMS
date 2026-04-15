@@ -221,9 +221,12 @@ export function CareersPage() {
                       <div className="py-12 text-center"><div className="w-8 h-8 border-2 border-primary/30 border-t-primary rounded-full animate-spin mx-auto" /></div>
                     ) : skillGaps.length === 0 ? (
                       <div className="py-12 text-center text-slate-400">
-                        <span className="text-4xl block mb-3">🔒</span>
-                        <p>Login to see your personal skill gap analysis</p>
-                        <Link to="/login" className="mt-4 inline-block px-6 py-2 bg-primary text-white rounded-lg text-sm font-medium">Login</Link>
+                        <span className="text-4xl block mb-3">📊</span>
+                        <p className="font-medium mb-1">No skill data yet</p>
+                        <p className="text-sm mb-4">Take assessments to see your personal skill gap for this career</p>
+                        <button onClick={() => setTab('path')} className="px-6 py-2 bg-primary text-white rounded-lg text-sm font-medium">
+                          See Learning Path →
+                        </button>
                       </div>
                     ) : (
                       <div className="space-y-4">
