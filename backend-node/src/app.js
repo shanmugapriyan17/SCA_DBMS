@@ -18,6 +18,7 @@ const skillRoutes = require('./routes/skills.routes');
 const assessmentRoutes = require('./routes/assessments.routes');
 const careerRoutes = require('./routes/careers.routes');
 const analyticsRoutes = require('./routes/analytics.routes');
+const adminRoutes = require('./routes/admin.routes');
 
 const app = express();
 const PORT = process.env.PORT || 10000;
@@ -76,6 +77,7 @@ app.use('/api/skills', skillRoutes);
 app.use('/api/assessments', assessmentRoutes);
 app.use('/api/careers', careerRoutes);
 app.use('/api/analytics', analyticsRoutes);  // SQL-based analytics
+app.use('/api/admin', adminRoutes);          // Admin / seed endpoints
 
 // ===========================================
 // ERROR HANDLING
