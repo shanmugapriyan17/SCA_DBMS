@@ -33,9 +33,14 @@ const allowedOrigins = (process.env.FRONTEND_URL || 'http://localhost:5173')
 
 app.use(cors({
     origin: (origin, callback) => {
-        // Allow requests with no origin (curl, Postman, mobile apps)
+        // Allow requests with no origin (curl, Postman, server-to-server)
         if (!origin) return callback(null, true);
-        if (allowedOrigins.includes(origin)) return callback(null, true);
+        // Allow any vercel.app subdomain (covers preview + production deploys)
+        if (origin.endsWith('.vercel.app')) return callback(null, true);
+        // Allow any onrender.com subdomain (backend health checks)
+        if (origin.endsWith('.onrender.com')) return callback(null, true);
+        // Allow configured origins (localhost dev + custom domain)
+        if (allowedOrigins.some(o => origin.startsWith(o.replace(/\/$/, '')))) return callback(null, true);
         callback(new Error(`CORS: origin ${origin} not allowed`));
     },
     credentials: true
